@@ -1,0 +1,94 @@
+html, body, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+}
+header {
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+}
+header:before {
+    display: table;
+    content: '';
+}
+header:after {
+    display: table;
+    content: '';
+}
+.logo1,.logo2 {
+    padding: 10px;
+}
+.logo1 {
+    order: 1;
+}
+.logo2 {
+    order: 3;
+}
+header .title {
+    order: 2;
+    width: 67px;
+    line-height: 70px;
+    padding: 0 10px;
+    margin: 0 auto;
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+.logo1:before,
+.logo2:before {
+    display: block;
+    width: 50px;
+    height: 50px;
+    content: '';
+}
+.logo1:before {
+    background: url("../image/baker02.png") no-repeat;
+    background-size: 50px 50px;
+}
+.logo2:before {
+    background: url("../image/baker01.png") no-repeat;
+    background-size: 50px 50px;
+}
+.logo1:hover,
+.logo2:hover,
+header .title:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+@media (min-width: 768px) {
+    header .title {
+        margin: 0 279px;
+    }
+}
+.section {
+    height: 700px;
+    padding-top: 100px;
+    background: chocolate;
+}
+.section .title, .info_text {
+    max-width: 768px;
+    margin: 0 auto;
+}
+.info_text {
+    margin-top: 30px;
+}
+.image_area {
+    margin: 20px auto 0;
+    max-width: 768px;
+}
+.info_image {
+    vertical-align: top;
+}
+@media (max-width: 767px) {
+    .section {
+        text-align: center;
+    }
+}
